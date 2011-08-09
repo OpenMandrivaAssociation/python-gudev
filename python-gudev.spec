@@ -6,12 +6,22 @@ Release:        %mkrel 1
 Source0: 	http://github.com/nzjrs/python-gudev/tarball/%{version}/nzjrs-python-gudev-%{version}.2-1-g780b007.tar.gz
 Group:          Development/Python
 License:        LGPLv3+
+%if %_arch == i386
 Requires:       libgudev1 >= 147
+%endif
+%if %_arch == X86_64
+Requires:       lib64gudev1 >= 147
+%endif
 Requires:       python-gobject
 BuildRequires:  python-devel
 BuildRequires:  autoconf
 BuildRequires:  libtool
+%if %_arch == i386
 BuildRequires:  libgudev1.0-devel >= 147
+%endif 
+%if  %_arch == x86_64
+BuildRequires:  lib64gudev1.0-devel >= 147
+%endif
 BuildRequires:  python-gobject-devel
 
 %description
