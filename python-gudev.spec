@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %doc COPYING README NEWS
 %doc test.py
-%{py_sitedir}/*  
+%{py_platsitedir}/*
 %{_datadir}/pygobject/2.0/defs/gudev.defs
 
 
