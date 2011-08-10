@@ -15,6 +15,7 @@ Requires:       lib64gudev1 >= 147
 Requires:       python-gobject
 BuildRequires:  python-devel
 BuildRequires:  autoconf
+BuildRequires:  automake
 BuildRequires:  libtool
 %if %_arch == i386
 BuildRequires:  libgudev1.0-devel >= 147
