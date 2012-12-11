@@ -48,23 +48,19 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pygobject/2.0/defs/gudev.defs
 
 
+
+
 %changelog
-* Thu Jul 21 2011 Stanislav Ochotnicky <sochotnicky@redhat.com> - 147.2-1
-- Update to latest upstream
+* Sat Feb 11 2012 Oden Eriksson <oeriksson@mandriva.com> 147-3mdv2012.0
++ Revision: 773026
+- relink against libpcre.so.1
 
-* Thu Jul 21 2011 Stanislav Ochotnicky <sochotnicky@redhat.com> - 147.1-7
-- Added upstream patch
-- Resolves: rhbz#637084,rhbz#723795
-- Related: rhbz#631789
+* Thu Aug 11 2011 Leonardo Coelho <leonardoc@mandriva.org> 147-2
++ Revision: 694053
+- change on spec file to add a dependency pkg
 
-* Tue Feb 08 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 147.1-6
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+* Wed Aug 10 2011 Leonardo Coelho <leonardoc@mandriva.org> 147-1
++ Revision: 693872
+- import spec file from fedora frist mandriva version
+- Created package structure for python-gudev.
 
-* Thu Jul 22 2010 David Malcolm <dmalcolm@redhat.com> - 147.1-5
-- Rebuilt for https://fedoraproject.org/wiki/Features/Python_2.7/MassRebuild
-
-* Mon Mar 15 2010 Miroslav Suchý <msuchy@redhat.com> 147.1-4
-- 572609 - do not strip all debuginfo
-
-* Mon Feb  8 2010 Miroslav Suchý <msuchy@redhat.com> 147.1-3
-- initial release
