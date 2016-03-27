@@ -1,9 +1,9 @@
 Summary:        Python (PyGObject) bindings to the GUDev library
-Name:           python-gudev
+Name:           python2-gudev
 URL:            http://github.com/nzjrs/
 Version:        147
 Release:        4
-Source0: 	http://github.com/nzjrs/python-gudev/tarball/%{version}/nzjrs-python-gudev-%{version}.2-1-g780b007.tar.gz
+Source0:	http://github.com/nzjrs/python-gudev/tarball/%{version}/nzjrs-python-gudev-%{version}.2-1-g780b007.tar.gz
 Group:          Development/Python
 License:        LGPLv3+
 %if %_arch == i386
@@ -12,8 +12,8 @@ Requires:       libgudev1.0_0 >= 147
 %if %_arch == X86_64
 Requires:       lib64gudev1.0_0 >= 147
 %endif
-Requires:       python-gobject
-BuildRequires:  python-devel
+Requires:       python2-gobject
+BuildRequires:  python2-devel
 BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  libtool
@@ -23,7 +23,9 @@ BuildRequires:  libgudev1.0-devel >= 147
 %if  %_arch == x86_64
 BuildRequires:  lib64gudev1.0-devel >= 147
 %endif
-BuildRequires:  python-gobject-devel
+BuildRequires:  python2-gobject-devel
+
+%rename python-gudev
 
 %description
 python-gudev is a Python (PyGObject) binding to the GUDev UDEV library.
@@ -32,7 +34,10 @@ python-gudev is a Python (PyGObject) binding to the GUDev UDEV library.
 %setup -q -n nzjrs-python-gudev-780b007
 
 %build
+export PYTHON=python2
+
 sh autogen.sh --prefix=%{_prefix} --disable-static
+
 %make
 
 %install
@@ -44,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %doc COPYING README NEWS
 %doc test.py
-%{py_platsitedir}/*
+%{py2_platsitedir}/*
 %{_datadir}/pygobject/2.0/defs/gudev.defs
 
 
