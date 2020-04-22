@@ -1,9 +1,9 @@
 Summary:        Python (PyGObject) bindings to the GUDev library
 Name:           python2-gudev
 URL:            http://github.com/nzjrs/
-Version:        147
-Release:        4
-Source0:	http://github.com/nzjrs/python-gudev/tarball/%{version}/nzjrs-python-gudev-%{version}.2-1-g780b007.tar.gz
+Version:        147.2
+Release:        1
+Source0:        https://github.com/nzjrs/python-gudev/archive/%{version}/python-gudev-%{version}.tar.gz
 Group:          Development/Python
 License:        LGPLv3+
 %if %_arch == i386
@@ -31,17 +31,17 @@ BuildRequires:  python2-gobject-devel
 python-gudev is a Python (PyGObject) binding to the GUDev UDEV library.
 
 %prep
-%setup -q -n nzjrs-python-gudev-780b007
+%setup -q -n python-gudev-147.2
 
 %build
 export PYTHON=python2
 
 sh autogen.sh --prefix=%{_prefix} --disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall
+%make_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
