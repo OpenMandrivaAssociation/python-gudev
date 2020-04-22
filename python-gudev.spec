@@ -3,7 +3,7 @@ Name:           python2-gudev
 URL:            http://github.com/nzjrs/
 Version:        147.2
 Release:        1
-Source0:        https://github.com/nzjrs/python-gudev/archive/%{version}/python-%{version}.tar.gz
+Source0:        https://github.com/nzjrs/python-gudev/archive/%{version}/python-gudev-%{version}.tar.gz
 Group:          Development/Python
 License:        LGPLv3+
 %if %_arch == i386
