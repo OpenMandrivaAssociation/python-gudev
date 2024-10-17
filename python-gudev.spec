@@ -1,6 +1,6 @@
 Summary:        Python (PyGObject) bindings to the GUDev library
 Name:           python2-gudev
-URL:            http://github.com/nzjrs/
+URL:            https://github.com/nzjrs/
 Version:        147.2
 Release:        1
 Source0:        https://github.com/nzjrs/python-gudev/archive/%{version}/python-gudev-%{version}.tar.gz
